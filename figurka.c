@@ -17,9 +17,7 @@ t_fig	*makelist(char *buf)
 	int		i;
 	int		j;
 	t_fig	*list;
-	int c;
 
-	c = 0;
 	if (!(list = (t_fig *)malloc(sizeof(t_fig))))
 		return (NULL);
 	i = 0;

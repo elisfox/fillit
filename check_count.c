@@ -12,7 +12,7 @@
 
 #include "fillit.h"
 
-int		check_last_line(char **str)
+static int		check_last_line(char **str)
 {
 	int		i;
 	int		j;
@@ -39,7 +39,7 @@ int		check_last_line(char **str)
 	return (c);
 }
 
-int		check_middle_line(char **str)
+static int		check_middle_line(char **str)
 {
 	t_tetr	l;
 
@@ -68,7 +68,7 @@ int		check_middle_line(char **str)
 	return (l.c);
 }
 
-int		check_first_line(char **str)
+static int		check_first_line(char **str)
 {
 	int		i;
 	int		j;
@@ -95,7 +95,7 @@ int		check_first_line(char **str)
 	return (c);
 }
 
-int		check_count_touch(char **str)
+int				check_count_touch(char **str)
 {
 	t_tetr	l;
 
@@ -123,7 +123,7 @@ int		check_count_touch(char **str)
 	return (l.c);
 }
 
-int		check_count_symbol(char **str)
+int				check_count_symbol(char **str)
 {
 	int		i;
 	int		j;

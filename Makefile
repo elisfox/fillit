@@ -15,28 +15,28 @@ NAME = fillit
 INCLUDES = fillit.h
 
 SRC = algoritm.c\
-	align.c\
-	check_charactar.c\
-	check_count.c\
-	check_tetrimer.c\
-	create_square.c\
-	figurka.c\
-	get_buf.c\
-	get_next_line.c\
-	main.c
+		align.c\
+		check_charactar.c\
+		check_count.c\
+		check_tetrimer.c\
+		create_square.c\
+		figurka.c\
+		get_buf.c\
+		get_next_line.c\
+		main.c
 
 OBJS = $(SRC:.c=.o)
 
-all: lib $(NAME)
+all: $(NAME)
 
-$(NAME): $(OBJS)
-		gcc  -Wall -Werror -Wextra -o $(NAME) $^ -L libft -lft
+$(NAME): lib $(OBJS)
+		@gcc -Wall -Werror -Wextra -o $(NAME) $(OBJS) -L libft -lft
 
 $(OBJS): %.o : %.c fillit.h
-	gcc -Wall -Werror -Wextra -I $(INCLUDES) -c $<
+		gcc -Wall -Werror -Wextra -I $(INCLUDES) -c $<
 
 lib:
-		@make -C libft
+	@make -C libft
 
 clean:
 	/bin/rm -f $(OBJS)

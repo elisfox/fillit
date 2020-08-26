@@ -12,7 +12,7 @@
 
 #include "fillit.h"
 
-int		check_four_on_four(char *line)
+static int		check_four_on_four(char *line)
 {
 	size_t		i;
 	size_t		length;
@@ -29,7 +29,7 @@ int		check_four_on_four(char *line)
 	return (result);
 }
 
-int		check_five_line(char *line)
+static int		check_five_line(char *line)
 {
 	size_t		length;
 	int			result;
@@ -42,7 +42,7 @@ int		check_five_line(char *line)
 	return (result);
 }
 
-int		check_charactar(int fd1)
+int				check_charactar(int fd1)
 {
 	char	*line;
 	int		count;
